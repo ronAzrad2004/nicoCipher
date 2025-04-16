@@ -5,15 +5,6 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Users_Handle {
-    public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in); // Create a scanner object for user input
-
-        encrypted_file(scanner); // Call the encryption method
-        //C:\Users\ron12\Documents\aa.txt
-        //C:\Users\ron12\Desktop\encoded.txt
-        decrypted_file(scanner); // Call the decryption method
-    }
-
     // Method to encrypt a file and save the result
     public static void encrypted_file(Scanner scanner) throws IOException {
         // Prompt user for the path of the file to encrypt
@@ -22,7 +13,7 @@ public class Users_Handle {
         path = path.replaceAll("\\\\", "/"); // Replace backslashes with slashes for compatibility
 
         // Create the file where encrypted content will be saved
-        File f = new File("C:/Users/ron12/Desktop/encoded.txt");
+        File f = new File("encoded.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(f));
         BufferedReader file = null;
 
@@ -67,7 +58,7 @@ public class Users_Handle {
         path = path.replaceAll("\\\\", "/"); // Replace backslashes with slashes for compatibility
 
         // Create the file where decrypted content will be saved
-        File f = new File("C:/Users/ron12/Desktop/decoded.txt");
+        File f = new File("decoded.txt");
         BufferedWriter writer = new BufferedWriter(new FileWriter(f));
         BufferedReader file = null;
 
